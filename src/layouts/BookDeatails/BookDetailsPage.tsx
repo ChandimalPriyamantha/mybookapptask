@@ -133,6 +133,26 @@ export const BookDetailsPage = () => {
                         </h5>
                         <p className="lead">{books.map((book) => book.description)}</p>
                     </div>
+                    <div>
+                            <ul>
+                                {books.map((book, index) => (
+                                    <li key={index}>
+                                        <div>
+                                            <label>Published Date:</label> {book.publishedDate}
+                                        </div>
+                                        <div>
+                                            <label>ISBN:</label> {bookId}
+                                        </div>
+                                        <div>
+                                            <label>Publisher:</label> {book.publisher}
+                                        </div>
+                                        <div>
+                                            <label>Subtitle:</label> {book.subtitle}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                 </div>
                 <hr />
             </div>
