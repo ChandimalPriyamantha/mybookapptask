@@ -1,32 +1,13 @@
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Navebar = () => {
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
+    <nav className="navbar navbar-expand-lg navbar-dark main-color py-1">
       <div className="container-fluid">
-        <span className="navbar-brand">Book App</span>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              
-            </li>
-            <li className="nav-item">
-              
-            </li>
-          </ul>
-          
-        </div>
+        <span className="navbar-brand">  <h3> <FontAwesomeIcon icon={faBook} /> bookbreeze</h3></span>
+
       </div>
     </nav>
   );

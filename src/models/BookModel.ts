@@ -1,5 +1,6 @@
 class BookModel{
    
+    //  properties of the BookModel class
      id:number;
      title:string;
      subtitle:string;
@@ -10,6 +11,7 @@ class BookModel{
      smallThumbnail?:string;
      ISBN?:string;
 
+     //  constructor of the BookModel class
      constructor(id: number, title: string, subtitle:string, authors: string, description: string, publisher: string,
         publishedDate:string, smallThumbnail: string, ISBN:string){
 

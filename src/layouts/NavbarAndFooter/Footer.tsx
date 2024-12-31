@@ -1,18 +1,9 @@
-
 export const Footer = () => {
     return (
         <div className='main-color'>
             <footer className='container d-flex flex-wrap 
                 justify-content-between align-items-center py-5 main-color'>
-                <p className='col-md-4 mb-0 text-white'>© MybookApp</p>
-                <ul className='nav navbar-dark col-md-4 justify-content-end'>
-                    <li className='nav-item'>
-                       
-                    </li>
-                    <li className='nav-item'>
-                       
-                    </li>
-                </ul>
+                <p className='col-md-4 mb-0 text-white'>© bookbreeze</p>
             </footer>
         </div>
     );
