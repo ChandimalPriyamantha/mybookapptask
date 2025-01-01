@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { SpinerLoading } from "../Utils/SpinerLoading";
+import { SpinerLoading } from "../../Utils/SpinerLoading";
 import { SearchBook } from "./components/SearchBook";
-import { Pagination } from "../Utils/Pagination";
-import BookModel from "../models/BookModel";
+import { Pagination } from "../../Utils/Pagination";
+import BookModel from "../../models/BookModel";
 
 export const BooksPage = () => {
     const [books, setBooks] = useState<BookModel[]>([]); // Array of books

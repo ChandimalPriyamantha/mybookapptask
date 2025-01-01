@@ -2,10 +2,11 @@ import React from "react";
 import "./App.css";
 import { Navebar } from "./layouts/NavbarAndFooter/Navebar";
 import { Footer } from "./layouts/NavbarAndFooter/Footer";
-import { BooksPage } from "./HomePage/BooksPage";
+import { BooksPage } from "./layouts/SearchBook/BooksPage";
 import { BookDetailsPage } from "./layouts/BookDeatails/BookDetailsPage";
 import { Route, Switch } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import { HomePage } from "./layouts/HomePage";
 
 function App() {
   return (
@@ -14,9 +15,12 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Redirect to="/home" />
-          <BooksPage />
+          <HomePage />
         </Route>
         <Route path="/home">
+        <HomePage />
+        </Route>
+        <Route path="/search">
           <BooksPage />
         </Route>
 

@@ -71,29 +71,25 @@ export const BookDetailsPage = () => {
     return (
         <div>
             <div className="container d-none d-lg-block">
-                <div className="row mt-5">
-                    <div className="col-sm-2 col-md-2">
-                        {books.map((book) => (
+                {books.map((book, index) => (
+                    <div key={index} className="row mt-5">
+                        <div className="col-sm-2 col-md-2">
                             <img
                                 src={book?.smallThumbnail}
                                 width="226"
                                 height="349"
                                 alt="Book"
-                            ></img>
-                        ))}
-                    </div>
-                    <div className="col-4 col-md-8 container">
-                        <div className="ml-2">
-                            <h2>{books.map((book) => book.title)}</h2>
-                            <h5 className="text-primary">
-                                {books.map((book) => book.authors)}
-                            </h5>
-                            <p className="lead">{books.map((book) => book.description)}</p>
+                            />
                         </div>
-                        <div>
-                            <ul>
-                                {books.map((book, index) => (
-                                    <li key={index}>
+                        <div className="col-4 col-md-8 container">
+                            <div className="ml-2">
+                                <h2>{book.title}</h2>
+                                <h5 className="text-primary">{book.authors}</h5>
+                                <p className="lead">{book.description}</p>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>
                                         <div>
                                             <label>Published Date:</label> {book.publishedDate}
                                         </div>
@@ -107,36 +103,33 @@ export const BookDetailsPage = () => {
                                             <label>Subtitle:</label> {book.subtitle}
                                         </div>
                                     </li>
-                                ))}
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
                 <hr />
             </div>
             <div className="container d-lg-none mt-5">
-                <div className="d-flex justify-content-center align-items-center">
-                    {books.map((book) => (
-                        <img
-                            src={book?.smallThumbnail}
-                            width="226"
-                            height="349"
-                            alt="Book"
-                        ></img>
-                    ))}
-                </div>
-                <div className="mt-4">
-                    <div className="ml-2">
-                        <h2>{books.map((book) => book.title)}</h2>
-                        <h5 className="text-primary">
-                            {books.map((book) => book.authors)}
-                        </h5>
-                        <p className="lead">{books.map((book) => book.description)}</p>
-                    </div>
-                    <div>
-                            <ul>
-                                {books.map((book, index) => (
-                                    <li key={index}>
+                {books.map((book, index) => (
+                    <div key={index}>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <img
+                                src={book?.smallThumbnail}
+                                width="226"
+                                height="349"
+                                alt="Book"
+                            />
+                        </div>
+                        <div className="mt-4">
+                            <div className="ml-2">
+                                <h2>{book.title}</h2>
+                                <h5 className="text-primary">{book.authors}</h5>
+                                <p className="lead">{book.description}</p>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>
                                         <div>
                                             <label>Published Date:</label> {book.publishedDate}
                                         </div>
@@ -150,11 +143,12 @@ export const BookDetailsPage = () => {
                                             <label>Subtitle:</label> {book.subtitle}
                                         </div>
                                     </li>
-                                ))}
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
-                </div>
-                <hr />
+                        <hr />
+                    </div>
+                ))}
             </div>
         </div>
     );
